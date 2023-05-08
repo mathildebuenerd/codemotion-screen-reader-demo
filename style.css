@@ -14,7 +14,8 @@ body.dark-mode {
     color: #fffbe0;
 }
 
-body.dark-mode .example {
+body.dark-mode .example,
+body.dark-mode a {
     color: #ffcf9c;
 }
 
