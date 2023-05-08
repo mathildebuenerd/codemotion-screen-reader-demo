@@ -1,0 +1,135 @@
+* {
+    font-family: "Roboto", sans-serif;
+    line-height: 150%;
+}
+
+body {
+    padding: 50px 10%;
+    font-size: 150%;
+    background: linear-gradient(-45deg, #fff8e1, #ffcf9c, #c794b8, #ffcf9c);
+}
+
+body.dark-mode {
+    background: #001b47;
+    color: #fffbe0;
+}
+
+body.dark-mode .example {
+    color: #ffcf9c;
+}
+
+p,
+li {
+    max-width: 900px;
+}
+
+#food-images {
+    display: flex;
+}
+
+#food-images figure img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.example {
+    font-style: italic;
+    font-weight: 500;
+    color: darkblue;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+/***
+    Email field
+  ***/
+.email-container {
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    align-items: end;
+}
+
+label[for="email-input"] {
+    font-size: 90%;
+}
+
+#email-button {
+    background: #8e2bff;
+    padding: 10px 20px 10px 15px;
+    border: none;
+    border-radius: 0 50px 50px 0;
+    height: 3.3em;
+    color: white;
+    font-size: 70%;
+}
+
+#email-input {
+    padding: 7.5px;
+    border: 4px solid #8e2bff;
+    border-radius: 50px 0 0 50px;
+    width: 350px;
+    font-size: 90%;
+}
+
+.hidden {
+    display: none;
+}
+
+/***
+    Color switch
+  ***/
+.color-switch-container {
+    transform: scale(0.8);
+    display: flex;
+    flex-direction: column;
+    display: inline-block;
+}
+
+#checkbox-color {
+    position: relative;
+    appearance: none;
+    width: 100px;
+    height: 50px;
+    background: #8e2bff;
+    border-radius: 50px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.4s;
+    margin-top: 10px;
+}
+
+#checkbox-color.checked {
+    background: #ffcf9c;
+}
+
+#checkbox-color::after {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 50px;
+    top: 0;
+    left: 0;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+    transition: 0.4s;
+}
+
+#checkbox-color.checked::after {
+    left: 50%;
+}
+
+label[for="checkbox-color"] {
+    width: 100%;
+    text-align: center;
+    font-size: 90%;
+}
